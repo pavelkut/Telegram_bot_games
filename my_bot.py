@@ -64,7 +64,7 @@ def switch_to_game(message):
     try:
         chat_id = message.chat.id
         user_dict[chat_id] = LIST(message.text)
-        if message.text == 'Hangerman':
+        if message.text == 'Hangman':
             markup = types.ReplyKeyboardMarkup(one_time_keyboard=True, resize_keyboard=True)
             bt1 = types.KeyboardButton('Short')
             bt2 = types.KeyboardButton('Medium')
