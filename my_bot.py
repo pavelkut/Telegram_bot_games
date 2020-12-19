@@ -46,13 +46,13 @@ def rules(message):
     
 def choose_game(message):
     if message.text == 'Yes, please':
-        bot.send_message(message.chat.id, 'We can play three different games: hangerman, cities and scrabble.')
-        bot.send_message(message.chat.id, 'Hangerman: I choose random english noun, and you need to guess it by one letter at a time. Be careful, you can make only 6 mistakes!')
+        bot.send_message(message.chat.id, 'We can play three different games: hangman, cities and scrabble.')
+        bot.send_message(message.chat.id, 'Hangman: I choose random english noun, and you need to guess it by one letter at a time. Be careful, you can make only 6 mistakes!')
         bot.send_message(message.chat.id, 'Cities: I name random city and you need to name a city, starting with the last letter of mine')
         bot.send_message(message.chat.id, 'Scrabble: I give you a random word. You need to compose as much nouns as possible, using only the letters of my word.')
         
     markup = types.ReplyKeyboardMarkup(one_time_keyboard=False, resize_keyboard=True)
-    bt1 = types.KeyboardButton('Hangerman')
+    bt1 = types.KeyboardButton('Hangman')
     bt2 = types.KeyboardButton('Cities')
     bt3 = types.KeyboardButton('Scrabble')
     markup.add(bt1, bt2, bt3)
